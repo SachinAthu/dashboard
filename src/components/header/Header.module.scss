@@ -1,0 +1,10 @@
+@import '../../sass/variables.scss';
+
+.header {
+  height: 80px;
+  position: fixed;
+  top: $html-body-padding;
+  left: $app-right-padding-left;
+  right: $html-body-padding;
+  z-index: $header-zIndex;
+}

@@ -1,0 +1,67 @@
+@import './variables.scss';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: $font-primary, 'sans-serif';
+  // 1rem - 16px
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-background;
+  color: $color-text;
+  padding: $html-body-padding;
+  padding-top: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @include respond(xxl) {
+    max-width: 1320px;
+  }
+
+  @include respond(xl) {
+    max-width: 1140px;
+  }
+
+  @include respond(lg) {
+    max-width: 960px;
+  }
+
+  @include respond(md) {
+    max-width: 720px;
+  }
+
+  @include respond(sm) {
+    max-width: 540px;
+  }
+}
+
+.card {
+  background: $color-background-card;
+  border-radius: 20px;
+  padding: $card-padding;
+}
+
+.dashboard-gray-btn {
+  padding: 2px 4px;
+  background: #282C38;
+  border: 0.5px solid #3C4254;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hr-1 {
+  border: 1px solid #282C38;
+}

@@ -1,0 +1,44 @@
+// fonts
+$font-primary: 'Inter';
+
+// colors
+$color-white: #ffffff;
+$color-black: #ffffff;
+
+$color-background: #141518;
+$color-background-card: #1E1F25;
+
+$color-text: $color-white;
+$color-text-2: #757B8C;
+$color-text-3: #3C4254;
+//
+
+// html body
+$html-body-padding: 1.2rem;
+
+// header
+$header-height: 80px;
+$header-zIndex: 500;
+
+// page
+$page-padding: 1rem;
+
+// card
+$card-padding: 1.2rem;
+$card-gap: 1rem;
+
+// sidebar
+$sidebar-width: 250px;
+$sidebar-width-collapse: 100px;
+$sidebar-zIndex: 600;
+
+// app right
+$app-right-padding: 1rem;
+$app-right-padding-left: calc($sidebar-width + $app-right-padding + $card-gap);
+$app-right-padding-left-collapse: calc($sidebar-width-collapse + $app-right-padding + $card-gap);
+
+// content
+$content-padding-top: calc($header-height + $html-body-padding + $card-gap);
+
+
+

@@ -7,4 +7,74 @@
   left: $app-right-padding-left;
   right: $html-body-padding;
   z-index: $header-zIndex;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .heading {
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  .break {
+    width: 2px;
+    height: 23px;
+    background: #282C38;
+    border-radius: 21px;
+    margin: 0 15px;
+  }
+
+  .div_1 {
+    display: flex;
+    align-items: center;
+
+    &_1 {
+      margin-right: 8px;
+    }
+
+    &_2 {
+      font-weight: 400;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+
+    &_3 {
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $color-text-3;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+  .search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    input[type='text'] {
+      padding: 0;
+      background: transparent;
+      margin-left: 10px;
+      border: none;
+      outline: none;
+      color: $color-white;
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        color: $color-text-2;
+      }
+    
+    }
+  }
+
+  .div_2 {
+    display: flex;
+    align-items: center;
+  }
+
 }

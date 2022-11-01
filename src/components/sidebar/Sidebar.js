@@ -6,21 +6,21 @@ import Logo from '../../assets/svg/logo.svg';
 import ShortCut from '../../assets/svg/sidebar_shortcut.svg';
 import ProfilePic from '../../assets/img/profile_pic.png';
 import ArrowLeft from '../../assets/svg/arrow_left.svg';
+import MenuExpand from '../../assets/svg/menu_expand.svg';
 import More from '../../assets/svg/more.svg';
 import { MENU, MENU_ITEM_TYPES } from './menu';
 
 // menu item icons
-import menu_dashboard from '../../assets/svg/menu_dashboard.svg';
-import menu_projects from '../../assets/svg/menu_projects.svg';
-import menu_calendar from '../../assets/svg/menu_calendar.svg';
-import menu_documents from '../../assets/svg/menu_documents.svg';
-import menu_store from '../../assets/svg/menu_store.svg';
-import menu_figma from '../../assets/svg/menu_figma.svg';
-import menu_slack from '../../assets/svg/menu_slack.svg';
-import menu_jira from '../../assets/svg/menu_jira.svg';
-import menu_settings from '../../assets/svg/menu_settings.svg';
-import menu_logout from '../../assets/svg/menu_logout.svg';
-import menu_expand from '../../assets/svg/menu_expand.svg';
+import menu_dashboard from '../../assets/svg/menu-items/menu_dashboard.svg';
+import menu_projects from '../../assets/svg/menu-items/menu_projects.svg';
+import menu_calendar from '../../assets/svg/menu-items/menu_calendar.svg';
+import menu_documents from '../../assets/svg/menu-items/menu_documents.svg';
+import menu_store from '../../assets/svg/menu-items/menu_store.svg';
+import menu_figma from '../../assets/svg/menu-items/menu_figma.svg';
+import menu_slack from '../../assets/svg/menu-items/menu_slack.svg';
+import menu_jira from '../../assets/svg/menu-items/menu_jira.svg';
+import menu_settings from '../../assets/svg/menu-items/menu_settings.svg';
+import menu_logout from '../../assets/svg/menu-items/menu_logout.svg';
 
 function Sidebar() {
   const location = useLocation();
@@ -71,7 +71,7 @@ function Sidebar() {
           <span className={classes.title}>{m.title}</span>
 
           { m.type === MENU_ITEM_TYPES.SUB_MENU && (
-            <img className={classes.expand} src={menu_expand} alt='expand menu' />
+            <img className={classes.expand} src={MenuExpand} alt='expand menu' />
           ) }
 
           { m.type === MENU_ITEM_TYPES.LINK_COUNT && <span className={classes?.count}>{m.count}</span> }

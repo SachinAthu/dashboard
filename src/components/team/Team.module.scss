@@ -1,0 +1,142 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixings.scss';
+
+.team {
+  .div_1 {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.2rem;
+
+    h4 {
+      font-weight: 500;
+      font-size: 14px;
+      margin-right: 20px;
+
+      @include respond(sm) {
+        display: none;
+      }
+    }
+
+    &_1 {
+      margin-right: 15px;
+    }
+
+    &_2 {
+      font-weight: 400;
+      font-size: 12px;
+      margin-right: 2px;
+      display: flex;
+      align-items: center;
+    }
+
+    &_2 {
+
+    }
+
+  }
+
+  .div_2 {
+    padding: 1rem 1.2rem;
+
+    ul {
+      list-style: none;
+
+      li {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .div_2_li_1 {
+          width: 45%;
+          display: flex;
+          align-items: center;
+
+          @include respond(sm) {
+            width: 59%;
+          }
+
+          @include respond(sm2) {
+            width: 62%;
+          }
+
+          img {
+            @include respond(sm2) {
+              transform: scale(0.75);
+            }
+          }
+
+          span {
+            font-weight: 400;
+            font-size: 14px;
+            margin-left: 12px;
+
+            @include respond(sm2) {
+              margin-left: 5px;
+            }
+          }
+        }
+
+        .div_2_li_2 {
+          width: 40%;
+
+          @include respond(sm) {
+            width: 23%;
+          }
+
+          @include respond(sm2) {
+            width: 20%;
+          }
+        }
+
+        .div_2_li_3 {
+          margin-left: auto;
+
+          span {
+            font-weight: 500;
+            font-size: 14px;
+            color: $color-text-3;
+
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+}
+
+.team_percentage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .wrapper {
+    position: relative;
+    width: 78%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    z-index: 50;
+
+    .progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 65%;
+      border-radius: 28px;
+      z-index: 100;
+    }
+
+  }
+  
+  .value_text {
+    width: 17%;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}

@@ -1,19 +1,56 @@
 @import '../../sass/variables.scss';
+@import '../../sass/mixings.scss';
 
 .header {
   height: 80px;
   position: fixed;
   top: $html-body-padding;
-  left: $app-right-padding-left;
+  left: $header-left;
   right: $html-body-padding;
   z-index: $header-zIndex;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+
+  @include respond(md) {
+    justify-content: space-between;
+  }
+
+  @include respond(xxl) {
+    left: $html-body-padding;
+  }
+
+  .menu_btn {
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
+
+    @include respond(xxl) {
+      display: block;
+    }
+  }
+
+  .logo {
+    display: none;
+    transform: scale(1.75);
+    margin-left: 2rem;
+
+    @include respond(md) {
+      display: block;
+    }
+
+    @include respond(sm) {
+      margin-left: 4rem;
+    }
+
+  }
 
   .heading {
     font-weight: 500;
     font-size: 24px;
+
+    @include respond(md) {
+      display: none;
+    }
   }
 
   .break {
@@ -22,11 +59,33 @@
     background: #282C38;
     border-radius: 21px;
     margin: 0 15px;
+
+    &_1 {
+      @include respond(md) {
+        display: none;
+      }
+    }
+
+    &_2 {
+      @include respond(lg2) {
+        display: none;
+      }
+    }
+
+    &_3 {
+      @include respond(lg) {
+        display: none;
+      }
+    }
   }
 
   .div_1 {
     display: flex;
     align-items: center;
+
+    @include respond(md) {
+      display: none;
+    }
 
     &_1 {
       margin-right: 8px;
@@ -55,6 +114,10 @@
     display: flex;
     align-items: center;
 
+    @include respond(lg2) {
+      display: none;
+    }
+
     input[type='text'] {
       padding: 0;
       background: transparent;
@@ -75,6 +138,36 @@
   .div_2 {
     display: flex;
     align-items: center;
+
+    @include respond(lg2) {
+      margin-left: auto;
+    }
+
+    @include respond(md) {
+      margin-left: 0;
+    }
+
+    .profile_pic {
+      display: none;
+      transform: scale(0.7);
+      margin-left: 6px;
+
+      @include respond(lg2) {
+        display: block;
+      }
+    }
+
+    .voice {
+      @include respond(lg2) {
+        display: none;
+      }
+    }
+
+    .premium_btn {
+      @include respond(lg) {
+        display: none;
+      }
+    }
   }
 
 }

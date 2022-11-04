@@ -1,4 +1,5 @@
 @import '../../sass/variables.scss';
+@import '../../sass/mixings.scss';
 
 .sidebar {
   width: $sidebar-width;
@@ -10,6 +11,10 @@
   z-index: $sidebar-zIndex;
   padding: 0;
   padding-bottom: 82px;
+
+  @include respond(xxl) {
+    display: none;
+  }
 
   .div_1 {
     position: relative;
@@ -49,6 +54,10 @@
     overflow-y: auto;
 
     ul {
+      a {
+        text-decoration: none;
+      }
+
       li.menu_item {
         list-style: none;
         margin-bottom: 30px;

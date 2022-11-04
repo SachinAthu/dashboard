@@ -24,7 +24,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1320px;
   margin: 0 auto;
 
   @include respond(xxl) {
@@ -54,11 +54,15 @@ body {
   padding: $card-padding;
 }
 
-.dashboard-gray-btn {
+.dashboard_gray_btn {
   padding: 2px 4px;
   background: #282C38;
   border: 0.5px solid #3C4254;
   border-radius: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: $color-text-2;
+  text-transform: uppercase;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -66,4 +70,11 @@ body {
 
 .hr-1 {
   border: 1px solid #282C38;
+}
+
+#srateChart {
+  .CircularProgressbar-path {
+    -webkit-filter: drop-shadow( 0px 0px 1px $color-blue) !important;
+    filter: drop-shadow( 0px 0px 1px $color-blue) !important;
+  }
 }

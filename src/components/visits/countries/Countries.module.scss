@@ -1,0 +1,50 @@
+@import '../../../sass/variables.scss';
+
+.countries {
+  width: 100%;
+
+  .div_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    h1 {
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+
+  .div_2 {
+    ul {
+      list-style: none;
+
+      li {
+        padding: 12px 0;
+        display: flex;
+        align-items: center;
+
+        span.name {
+          font-weight: 500;
+          font-size: 14px;
+          margin-left: 12px;
+        }
+
+        span.count {
+          font-weight: 400;
+          font-size: 12px;
+          color: $color-text-3;
+          margin-left: auto;
+          margin-right: 20px;
+        }
+
+        span.rate {
+          font-weight: 400;
+          font-size: 13px;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+
+}

@@ -6,7 +6,7 @@ function NotFound() {
 
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1>Not Found for <code>{ location.pathname }</code></h1>
+      <h1>Not Found - <code>{ location.pathname }</code></h1>
       <br />
       <Link to="/">Dashboard</Link>
     </div>

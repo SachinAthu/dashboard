@@ -1,0 +1,57 @@
+.cards {
+  width: 100%;
+
+  .div_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    h4 {
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
+  .div_2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+.card {
+  position: relative;
+
+  div.number {
+    position: absolute;
+    left: 32px;
+    top: 68px;
+    display: flex;
+    align-items: center;
+
+    span:not(#cardNumber) {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1.2px;
+      margin-right: 5px;
+    }
+
+    span#cardNumber {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1.2px;
+    }
+
+  }
+
+  span.date {
+    position: absolute;
+    left: 20px;
+    bottom: 24px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+}

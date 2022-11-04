@@ -64,8 +64,8 @@ function Sidebar() {
         classList += ' ' + classes.active;
       }
 
-      let menuItem = (
-        <li className={classList} key={i}>
+      let menuItemContent = (
+        <li className={classList}>
           { m.icon && <img src={menuIcons[m.icon]} alt={m.icon} /> }
 
           <span className={classes.title}>{m.title}</span>
@@ -82,6 +82,20 @@ function Sidebar() {
             </span>
           ) }
         </li>
+      );
+
+      let menuItem = (
+        <div key={i}>
+          { m.type === MENU_ITEM_TYPES.HEADING || m.type === MENU_ITEM_TYPES.SUB_MENU ? (
+            <Link>
+              <>{menuItemContent}</>
+            </Link>
+          ) : (
+            <Link to={m.route}>
+              <>{menuItemContent}</>
+            </Link>
+          ) }
+        </div>
       );
 
       menuItems.push(menuItem);
@@ -101,11 +115,11 @@ function Sidebar() {
             <span className={classes.name} style={{ marginLeft: '12px' }}>Dashboard</span>
           </Link>
 
-          <span className='dashboard-gray-btn' style={{ marginLeft: 'auto', marginRight: '8px' }}>
+          <span className='dashboard_gray_btn' style={{ marginLeft: 'auto', marginRight: '8px', padding: '4px' }}>
             <img src={ShortCut} alt='sidebar shortcut' />
           </span>
 
-          <span className='dashboard-gray-btn'>
+          <span className='dashboard_gray_btn' style={{ padding: '5px' }}>
             <img src={ArrowLeft} alt='arrow left' />
           </span>
         </div>
@@ -114,7 +128,7 @@ function Sidebar() {
 
         <div className={classes.body}>
           <ul>
-            { generateMenu().map(m => m) }
+            { generateMenu() }
           </ul>
         </div>
       </div>

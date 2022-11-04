@@ -5,6 +5,13 @@ $font-primary: 'Inter';
 $color-white: #ffffff;
 $color-black: #ffffff;
 
+$color-blue: #246CF9;
+$color-red: #FA2256;
+$color-green: #11CABE;
+$color-green-2: #30E0A1;
+$color-yellow: #FFB545;
+
+
 $color-background: #141518;
 $color-background-card: #1E1F25;
 
@@ -15,10 +22,6 @@ $color-text-3: #3C4254;
 
 // html body
 $html-body-padding: 1.2rem;
-
-// header
-$header-height: 80px;
-$header-zIndex: 500;
 
 // page
 $page-padding: 1rem;
@@ -32,10 +35,14 @@ $sidebar-width: 250px;
 $sidebar-width-collapse: 100px;
 $sidebar-zIndex: 600;
 
+// header
+$header-height: 80px;
+$header-left: calc($sidebar-width + $html-body-padding + $card-gap);
+$header-zIndex: 500;
+
 // app right
-$app-right-padding: 1rem;
-$app-right-padding-left: calc($sidebar-width + $app-right-padding + $card-gap);
-$app-right-padding-left-collapse: calc($sidebar-width-collapse + $app-right-padding + $card-gap);
+$app-right-padding-left: $sidebar-width;
+$app-right-padding-left-collapse: $sidebar-width-collapse;
 
 // content
 $content-padding-top: calc($header-height + $html-body-padding + $card-gap);

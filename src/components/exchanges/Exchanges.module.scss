@@ -1,0 +1,45 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixings.scss';
+
+.exchanges {
+  .exchange {
+    height: 90px;
+    padding: 0.75rem 1.2rem;
+    display: flex;
+    align-items: stretch;
+
+    @include respond(lg) {
+      margin-bottom: $card-gap;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &_div_1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      &_span_1 {
+        font-weight: 500;
+        font-size: 13px;
+        color: $color-text-3;
+      }
+
+      &_span_2,
+      &_span_3 {
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+    }
+
+    &_div_2 {
+      width: 65px;
+      margin-left: auto;
+    }
+
+  }
+}

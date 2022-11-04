@@ -8,13 +8,20 @@ import Voice from '../../assets/svg/voice.svg';
 import Notification from '../../assets/svg/notification.svg';
 import Theme from '../../assets/svg/theme.svg';
 import Star from '../../assets/svg/star.svg';
+import Logo from '../../assets/svg/logo.svg';
+import Menu from '../../assets/svg/menu.svg';
+import ProfilePic from '../../assets/img/profile_pic.png';
 
 function Header() {
   return (
     <div className={`card ${classes.header}`}>
+      <img className={classes.menu_btn} src={Menu} alt='menu btn' />
+
+      <img className={classes.logo} src={Logo} alt='logo' />
+
       <h2 className={classes.heading}>Dashboard</h2>
 
-      <div className={classes.break}></div>
+      <div className={`${classes.break} ${classes.break_1}`}></div>
        
       <div className={classes.div_1}>
         <img className={classes.div_1_1} src={Folder} alt='folder' />
@@ -34,19 +41,21 @@ function Header() {
       </div>
 
       <div className={classes.div_2}>
-        <img src={Voice} alt='voice' style={{ margin: '0 8px' }} />
+        <img  className={classes.voice} src={Voice} alt='voice' style={{ margin: '0 8px' }} />
 
-        <div className={classes.break}></div>
+        <div className={`${classes.break} ${classes.break_2}`}></div>
 
         <img src={Notification} alt='notification' style={{ margin: '0 6px' }} />
 
         <img src={Theme} alt='theme' style={{ margin: '0 6px' }} />
 
-        <div className={classes.break}></div>
+        <img className={classes.profile_pic} src={ProfilePic} alt='profile pic' />
 
-        <span className='dashboard-gray-btn'>
+        <div className={`${classes.break} ${classes.break_3}`}></div>
+
+        <span className={`dashboard_gray_btn ${classes.premium_btn}`}>
           <img src={Star} alt='star' style={{ marginRight: '5px' }} />
-          <span style={{ fontWeight: 600, fontSize: '12px', color: '#FFB545', textTransform: 'uppercase' }}>PREMIUM</span>
+          <span style={{ fontWeight: 600, color: '#FFB545' }}>PREMIUM</span>
         </span>
       </div>
     </div>

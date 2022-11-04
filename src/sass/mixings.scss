@@ -1,4 +1,10 @@
 @mixin respond($breakpoint) {
+  // 450px
+  @if $breakpoint == sm2 {
+    @media (max-width: 450px) {
+      @content;
+    }
+  }
   // 576px
   @if $breakpoint == sm {
     @media (max-width: 576px) {
@@ -11,9 +17,15 @@
       @content;
     }
   }
-  // 992px
+  // 920px
+  @if $breakpoint == lg2 {
+    @media (max-width: 920px) {
+      @content;
+    }
+  }
+  // 1030px
   @if $breakpoint == lg {
-    @media (max-width: 992px) {
+    @media (max-width: 1030px) {
       @content;
     }
   }
@@ -27,6 +39,29 @@
   @if $breakpoint == xxl {
     @media (max-width: 1400px) {
       @content;
+    }
+  }
+}
+
+@mixin work_summary_div_1_2 {
+  div {
+    display: flex;
+    align-items: center;
+
+    span.span_1 {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    span.span_2 {
+      font-weight: 400;
+      font-size: 16px;
+
+      @include respond(sm2) {
+        font-size: 13px;
+      }
     }
   }
 }
